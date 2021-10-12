@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: acrfares.azurecr.io/go-template-1:latest
+  repository: acrfares.azurecr.io/go-template-1
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
