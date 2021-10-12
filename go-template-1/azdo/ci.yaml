@@ -1,0 +1,27 @@
+name: ci
+
+trigger:
+  batch: true
+  branches:
+    include: 
+    - main
+  paths:
+    include: 
+    - /
+    exclude:
+    - /deploy
+    - /manifests
+    
+pr: none
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+- group: acr-variable-group
+- template: /common/ci-vars.yaml
+  parameters:
+      projectName: go-template-1
+
+steps:
+- template: /common/ci-steps.yaml
